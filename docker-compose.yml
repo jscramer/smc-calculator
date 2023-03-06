@@ -1,0 +1,19 @@
+version: '1'
+services:
+  microservice-calculator:
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+      target: development-build
+    image: microservice-calculator
+    environment:
+    # General     
+    - CALCULATOR_PORT=${CALCULATOR_PORT:-8081}   
+    tty: true
+    network_mode: host
+    ports:
+    - ${CALCULATOR_PORT:-8081}:${CALCULATOR_PORT:-8081} 
+   
+
+
+

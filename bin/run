@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Runs the command in the already running container
+docker-compose -f docker-compose.yml exec microservice-calculator pipenv $*

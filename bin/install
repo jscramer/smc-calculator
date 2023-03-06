@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Starts the backend container and runs pipenv to install packages
+docker-compose -f docker-compose.yml run microservice-calculator pipenv install $*

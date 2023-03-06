@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# NOTE: The backend container should be running when this script is called
+
+# Executes the pytest command within pipenv (within the service container)
+docker-compose -f docker-compose.yml exec microservice-calculator pipenv run pytest $*
